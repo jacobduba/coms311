@@ -55,7 +55,8 @@ for j = 2 to n // j goes from 2, 3, ..., n
 - The outer loop consists of three statements and a while loop with two-statements in its body.
 - The while loop iterates at most $j-1$ times, and each iteration of the while loop checks the loop condition once and runs each of the two statements in the loop body once, with the cost of each iteration bound.
 - So the cost of the while loop is bounded by 3d x (j - 1) + d where the last term d is an upper bound on the cost of evaluating the while loop plus the upper bound of 4d on the loop condition.
-- The worst-case running time T(n) of the algorithm is bounded by the following expression:
+
+The worst-case running time T(n) of the algorithm is bounded by the following expression:
 
 $$T(n) \leq d + \sum_{j=2}^{n} (4d + 3d(j-1) + d) + d$$
 
@@ -64,3 +65,7 @@ $$= 2d + \sum_{j=2}^n(5d)+3d(\sum_{j=2}^n(j-1))$$
 $$= 2d + 5d(n-1) + 3d(1 + 2 + ... + (n - 1))$$
 
 $$= 2d + 5d(n-1) + 3d(\frac{(n-1)n}{2})$$
+
+$$\leq 2d + 5dn + 3dn^2 \leq 2dn^2 + 5dn^2 + 3dn^2 = 10dn^2$$
+
+So $T(n)$ is $O(n^2)$. We will define the big-O notation later.
