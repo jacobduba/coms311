@@ -57,7 +57,10 @@ for j = 2 to n // j goes from 2, 3, ..., n
 - So the cost of the while loop is bounded by 3d x (j - 1) + d where the last term d is an upper bound on the cost of evaluating the while loop plus the upper bound of 4d on the loop condition.
 - The worst-case running time T(n) of the algorithm is bounded by the following expression:
 
-$$T(n) \leq d + \sum_{j=2}^{n} (4d + 3d(j-1) + d) + d\\
-= 2d + \sum_{j=2}^n(5d)+3d(\sum_{j=2}^n(j-1))\\
-= 2d + 5d(n-1) + 3d(1 + 2 + ... + (n - 1))\\
-= 2d + 5d(n-1) + 3d(\frac{(n-1)n}{2})$$
+$$T(n) \leq d + \sum_{j=2}^{n} (4d + 3d(j-1) + d) + d$$
+
+$$= 2d + \sum_{j=2}^n(5d)+3d(\sum_{j=2}^n(j-1))$$
+
+$$= 2d + 5d(n-1) + 3d(1 + 2 + ... + (n - 1))$$
+
+$$= 2d + 5d(n-1) + 3d(\frac{(n-1)n}{2})$$
