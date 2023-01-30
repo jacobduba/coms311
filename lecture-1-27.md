@@ -159,4 +159,48 @@ $lg^k(n) = (log_n)^k$ (exponentiation)
 
 $lglgn = lg(lg(n))$ (composition)
 
-AN important notational convention: $lgn + k = (lgn) + k$, not $lg(n+k)$.
+An important notational convention: $lgn + k = (lgn) + k$, not $lg(n+k)$.
+
+The logarithmic function to base a is the inverse of hte exponential function with base a.
+
+If $a^x = y$, then $x = log_ay$ (e.g. $2^4 = 16$ and $4 = log_216$)
+
+That is, applying the exponential function then the logarithmic function with the same base gives us back the original value:
+
+$x = log_ay = log_a(a^x)$ (1)
+
+And applying the logarithmic function then the exponential function with the same base alos gives us back the original value:
+
+$y = a^x = a^{log_ay}$ (2)
+
+We can use these identities and some identities about exponentia functions to get other useful identities.
+
+For example, we start with the following identity.
+
+$ab = (a)(b)$
+
+Apply (2) to $ab$ on the left side, and (2) to $a$ and $b$ separately on the right side, we obtaino
+
+$c^{log_c(ab)} = (c^{log_ca})(c^{log_cb})$
+
+Applying the identity about the exponential function on the right side we get
+
+$c^{log_c(ab)} = c^{log_ca + log_cb}$
+
+Applying the ogarithmic function with base c to each side, we obtain
+
+$log_cc^{log_c(ab)} = log_cc^{log_ca + log_cb}$
+
+Then applying (1) to each side we obtain
+
+$log_C(ab) = log_c(a) + log_c(b)$
+
+For real numbers $a > 0$, $b > 0$ and $c > 0$, we have
+
+$a = b^{log_ba}$
+
+$log_c(ab) = log_c(a) + log_c(b)$
+
+$log_ba^n = nlog_ba$
+
+TBD
