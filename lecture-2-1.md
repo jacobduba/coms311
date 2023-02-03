@@ -69,10 +69,6 @@ $T(1) = d = 2d * 1 - d$
 
 $T(2) = T(1) +T(1) + d = d + d + d = 3d = 2d * 2 - d$
 
-TBD
+$T(3) = T(2) + T(1) = ...$
 
-## Subtleties
-
-We may need to select a tight asymptotic bound by subtracting a lower-order term, in order to complete the induction stpe of a proof.
-
-TBD
+And so on...
