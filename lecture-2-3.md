@@ -121,3 +121,32 @@ Assume that $n$ is a power of 3. Then $T(n) = T(n/3) + T(2n/3) + dn if $n \geq 3
 Replacing n by n/3 and 2n/3 in the above recurrence, we obtain $T(n/3) = T(n/3^2) + T(2n/3^2) + d(n/3)$ and 
 $T(2n/3) =  T(2n/3^2) + d(4n/3^2) + d(2n/3)$.
 The sum of all costs at this level is $d(n/3) + d(2n/3) = dn$.
+
+At the next level, we have
+$T(n/3^2) = T(n/3^3) + T(4n/3^3) + d(2n/3^2)...$
+
+The sum of all costs at this level is $d(n/3^2) + 2d(2n/3^2) + d(4n/3^2) = dn$.
+
+The longest simple path from the root to a leaf is
+$n \rightarrow (2/3) \rightarrow (2/3)^2n \dots \rightarrow 1$, 
+where $(2/3)^kn =1$ or $(3/2)^k = n$.
+
+Thus the height of the tree is $k = \log _{3/2} n$.
+
+The sum of costs over all levels is the number of levels times the cost of each level, or $O(dn \log _{3/2} n) = O(n \log n)$
+
+### Proving by mathematical induction
+
+We prove by mathematical induction that $T(n) \leq cn \log n$ for some constant $c > 0$.
+
+**Base**: For $1 \leq n < 3$, we have $T(n) = d(n-1) \leq cn \log n$ if $g \geq d$.
+
+**Induction**: Assume that for every $1 \leq m < n$, we have
+$T(M) \leq cm \log m$.
+Setting $m = \lfloor n/3 \rfloor$ and $m=\lfloor 2n/3 \rfloor$, we obtain
+$T(\lfloor n / 3 \rfloor) \leq c(\lfloor n/3 \rfloor) \log (\lfloor n/3 \rfloor)$ and
+
+...TBD...
+
+Then we have $T(n) = T(\lfloor n/3 \rfloor) + T(\lfloor 2n/3 \rfloor) + dn \leq c(\lfloor n/3 \rfloor) \log (\lfloor n/3 \rfloor) + c(\lfloor 2n/3 \rfloor) \log (\lfloor 2n/3 \rfloor) + dn \leq cn \log n$.
+This equaltion was done through autopilot and wasn't in the lecture, so it might not be right.
