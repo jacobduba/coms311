@@ -22,13 +22,17 @@ The master method is used to determine the running time $T(n)$ of an algorithm t
 each of size $\lceil n/b \rceil$ for some constant $a \geq 1$ and $b > 1$.
 
 The a subproblems are solved recursively, each in $T(\lceil n/b \rceil)$ time.
+Let asymptotically positive function $f(n)$ denote the cost of dividing the problem of contianing the results of subproblems.
 
-TBD important!!!
+Then $T(n)$ is defined by the following recurrence.
+$T(n) = aT(\lceil n/b \rceil) + f(n)$, or $T(n) = aT(\lfloor n/b \rfloor) + f(n)$.
 
-### Example
+> We use floors in the textbook, but ceils can be handled by the master therom.
+
+Let $f(n)$ and $T(n)$ with positive contants $a$ and $b$ be defined in the above recurrence.
 
 1. If $f(n) = O(n^{\log _b a - \epsilon})$ for some constant $\epsilon > 0$, then the running time of the algorithm is $T(n) = \Theta(n^{log _b a})$.
 2. If $f(n) = \Theta(n^{\log _b a} \log ^k n)$ for some constant $k \geq 0$, then
-$T(n) = \Theta(n^{\log _b a} \log ^k n)$.
+$T(n) = \Theta(n^{\log _b a} \log ^{k+1} n)$.
 3. If $f(n) = \Omega(n^{\log _b a + \epsilon})$ for some constant $\epsilon > 0$, and if
-$af(\lceil n/b \rceil) \leq cf(n)$ for some constants $a, c > 0$, then all sufficiently large $n$, then $T(n) = \Theta(f(n))$.
+$af(\lceil n/b \rceil) \leq cf(n)$ for some constant $c > 0$, then all sufficiently large $n$, then $T(n) = \Theta(f(n))$.
