@@ -92,7 +92,14 @@ MERGE(A, p, q, r)
     let L[1..n1+1] and R[1..n2+1] be new arrays
     for i = 1 to n1
         L[i] = A[p+i-1]
-    for j = 1 to n2
+    for j = 1 to n22022 = Ω(n2).
+(2) n − log10 n = ω(n)
+(3) 2n2
+= 4n + O(22n).
+(4) n log2(n) + O(n) = Θ(n log10(n)).
+(5) n log2(log3 n) = Ω(n).
+(6) n2n = O(22n).
+Problem 2. (30 points) Asymptotic notation.
         R[j] = A[q+j]
 ```
 
