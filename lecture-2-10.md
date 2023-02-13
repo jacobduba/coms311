@@ -78,7 +78,7 @@ We show that `BUILD-MAX-HEAP` is correct by using the following loop invariant.
 
 At the start of each iteration of the for loop of lines 2-3, each of nodes $i + 1, i + 2, ... n$ is the root of a max-heap.
 
-**Initialization**: BEfore the first iteration of the loop, $i = \lfloor n/2 \rfloor$ each of the nodes...TBD...
+**Initialization**: Before the first iteration of the loop, $i = \lfloor n/2 \rfloor$ each of the nodes...TBD...
 
 **Maintenance**: Assume that at the start of iteration $i \leq \lfloor n/2 \rfloor$, each of nodes $i + 1, i + 2, ... n$ is the root of a max-heap.
 
@@ -102,7 +102,7 @@ Then the index of the left child of this node is $2i$.
 
 Next the index of the left child of this child $2^2 i$.
 
-In general, the index of the leftmost... TBD
+In general, the index of the leftmost node reached on the left-child path of $h$ edges is $2^hi$.
 
 Thus a node in an n-element heap is of height $\leq h \geq o$ if and only if its index i satisfies $2^h \leq n \lor i \leq n/2^h$. 
 
@@ -111,3 +111,9 @@ Note that the index is an integer, we have $i \leq \lfloor n/2^h \rfloor$.
 The number the number of nodes of height $h \geq 0$ is the number of nodes of height $0$ in the resulting heap with $\lfloor n/2^h \rfloor$ nodes, after each node of height less than $h$ is removed.
 
 Using the formula for the number of nodes of height $0$ in a heap with $\lfloor n/2^h \rfloor$ nodes, we conclude that the number of nodes of height $h \geq 0$ is $\lceil \lfloor n/2^h \rfloor \ 2 \rceil \leq \lceil \lceil n / 2^h \rceil / 2 \rceil$.
+
+Thus, the number of nodes of height $\geq h \geq 0$ is $\lfloor n/2^h \rfloor$.
+
+The number of nodes of height $h \geq 0$ is the number of nodes of height $0$ in the resulting heap with $\lfloor n/2^h \rfloor$ nodes, after each node of height less than $h$ is removed.
+
+Using the formula for the number of nodes of height $0$ in a heap with $\lfloor n/2^h \rfloor$ nodes, we conclude that the number of nodes of height $h \ geq 0$ is $\lceil \lfloor n/2^h \rfloor / 2 \rceil \leq \lceil \lceil n / 2^h \rceil / 2 \rceil = \lceil n / 2^{h + 1 } \rceil$.
