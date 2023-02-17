@@ -1,5 +1,12 @@
 # Lecture 12 (2-15)
 
+## Some **!! Helpful !!** Log Identities
+
+- $\lg g(n) = \Theta (n \lg n)$
+- $n! = \Theta (n^n)$
+
+## Proving fastest sorting is $O(n \lg n)$
+
 Any sorting algorithm on the comparison model of computation requires $\Omega (n \lg n)$ comparisons in the worst case.
 
 **Proof**: Any sorting algorithm on the comparison model of computation is represented by a decision tree in which each of the $n!$ permutations appears as a reachable leaf.
