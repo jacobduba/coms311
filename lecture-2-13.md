@@ -43,7 +43,7 @@ Thus, `HEAPSORT` takes time in $O(n \lg n)$.
 We show a lower bound for sorting on a model of computation that allows only comparisons between elements.
 
 Let $\langle a_1, a_2, ..., a_n \rangle$ be an array of $n$ distinct elements. 
-The model only allows the following comparisions between two elements $a_i$ and $a_j$ to determine their relative order: $a_1 < a_j, a_i \leq a_j, a_i = a_j$, or $a_i > a_j$.
+The model only allows the following comparisons between two elements $a_i$ and $a_j$ to determine their relative order: $a_1 < a_j, a_i \leq a_j, a_i = a_j$, or $a_i > a_j$.
 
 This model deos not alow other operations (such as inspecting the values of the elements) to gain their order information.
 
