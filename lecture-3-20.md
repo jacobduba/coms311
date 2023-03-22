@@ -76,3 +76,14 @@ Thus, the inequality $\delta(s,u) + 1 \leq \delta(s,v)$ holds.
 
     Note that vertex v is never enqueued again because it grayed and lines 14-17 are executed only for white vertices.
     Thus, the value of $v.d$ never changes again.
+
+### Lemma 22.3
+
+If the queue Q is running BFS on a graph G = (V, E) contains the vertices $<v_1, v_2, ...m v_r>$ with $r \geq 1$, where $v_1$ is the head of $Q$, $v_r$ is the tail, and $u$ is the last vertex dequeued, then $v_r.d \leq u.d + 1, u.d \leq v_1.d$, and $v_i.d \leq v_{i+1}.d$ for $i = 1, 2, ... r - 1$, provided that $r \geq 2$.
+
+### Corollary 22.4
+
+Suppose that vertices $v_i$ and $v_j$ are enqueued during the execution of BFS, and that $v_i$ is enqueued before $v_j$.
+Then $v_i.d \leq v_j.d$ at the time that $v_j$ is enqueued.
+
+The proof follows from Lemma 22.3 and the property that each vertex receives a finite $d$ value at most once during the course of BFS.
