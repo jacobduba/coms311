@@ -14,7 +14,7 @@ The intervals [u.d, u.f] and [v.d, v.f] are entirely disjoint, and neither u nor
 
 The interval [u.d, u.f] is contained entirely within the interval [v.d, v.f] and u is a descendant of v in a dept-first tree.
 
-The interval [v.d, v.f] is contained entirely within the interval [u.d, u.f] and v is a descendant of u in a depth-frist tree.
+The interval [v.d, v.f] is contained entirely within the interval [u.d, u.f] and v is a descendant of u in a depth-first tree.
 
 ### Proof
 
